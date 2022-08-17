@@ -28,12 +28,15 @@ Por favor instale o seguinte:
     Linux/Mac
   - Crie uma pasta por exemplo em `C:\Users\Usuário\foundry\` e extraia os
     arquivos baixados para essa pasta
-  - Adicione essa pasta no PATH das Variáveis de Ambiente
-    - Win + R `sysdm.cpl` -> Avançado -> Variáveis de Ambiente
+  - Adicione essa pasta no PATH das Variáveis de Ambiente (Windows)
+    - Abra o executar (Windows + R) rode o comando `sysdm.cpl`
+    - Vá em Avançado -> Variáveis de Ambiente
     - Selecione Path (da área de cima, não embaixo), clique em Editar...
     - Clique em Novo, cole o caminho de onde estão os executáveis do Foundry,
       por exemplo `C:\Users\Usuário\foundry\`
     - Dê OK em todas as janelas
+  - Abra o terminal e digite `forge --version` e verifique se deu algo parecido
+    com `forge 0.2.0 (e385736 2022-08-13T00:11:42.087119284Z`
 
 ## Baixando repositório da aula
 
@@ -60,8 +63,7 @@ forge test
 
 ## Setup
 
-Abra o arquivo `.env.example`. Você precisará atualizar as seguintes variáveis
-no arquivo `.env`:
+Abra o arquivo `.env.example`. Você precisará atualizar as seguintes variáveis:
 
 - `PRIVATE_KEY`: Uma chave privada da sua carteira.
 - `POLYGONSCAN_API_KEY`: Se você for verificar o contrato no polygonscan.
