@@ -1,0 +1,8 @@
+{
+      "[solidity]": {
+            "editor.defaultFormatter": "JuanBlanco.solidity"
+        },
+      "solidity.linter": "solhint",
+      "solidity.enabledAsYouTypeCompilationErrorCheck": true,
+      "solidity.validationDelay": 200
+}
