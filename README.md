@@ -30,7 +30,7 @@ Por favor instale o seguinte:
     arquivos baixados para essa pasta
   - Adicione essa pasta no PATH das Variáveis de Ambiente
     - Win + R `sysdm.cpl` -> Avançado -> Variáveis de Ambiente
-    - Selecine Path (da área de cima, não embaixo), clique em Editar...
+    - Selecione Path (da área de cima, não embaixo), clique em Editar...
     - Clique em Novo, cole o caminho de onde estão os executáveis do Foundry,
       por exemplo `C:\Users\Usuário\foundry\`
     - Dê OK em todas as janelas
