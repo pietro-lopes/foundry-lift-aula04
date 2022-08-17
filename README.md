@@ -77,9 +77,9 @@ Para dar deploy e precisamos carregas as variáveis que atualizamos no `.env`:
 - No Linux use `source .env`
 - No Windows
   - cmd
-    - `for /F "tokens=*" %i in (.env) do set %i`
+    - `@echo off; for /F "tokens=*" %i in (.env) do set %i`
   - PowerShell
-    - `foreach ($line in Get-Content .env) { $array = $line.Split("="); New-Item -Force -Path Env:$($array[0]) -Value $($array[1].Trim('"').Trim("'")) }`
+    - `foreach ($line in Get-Content .env) { $array = $line.Split("="); New-Item -Force -Path Env:$($array[0]) -Value $($array[1].Trim('"').Trim("'")) | Out-Null}`
 
 Para dar deploy e verificar na testnet da **Polygon Mumbai** por exemplo, use o
 seguinte comando: **Não esqueça de carregar as variáveis que estão em** `.env`
@@ -89,7 +89,7 @@ novamente._
 - No terminal do Linux use `$NOME_DA_VARIAVEL`
 
   `forge create --verify --gas-price 60gwei --chain polygon-mumbai --rpc-url $MUMBAI_RPC --private-key $PRIVATE_KEY --etherscan-api-key $POLYGONSCAN_API_KEY src/T03TokenOwner.sol:T03TokenOwner`
-- No PowerShell use `$Env:NOME_DA_VARIAVEL`
+- No PowerShell do Windows use `$Env:NOME_DA_VARIAVEL`
 
   `forge create --verify --gas-price 60gwei --chain polygon-mumbai --rpc-url $Env:MUMBAI_RPC --private-key $Env:PRIVATE_KEY --etherscan-api-key $Env:POLYGONSCAN_API_KEY src/T03TokenOwner.sol:T03TokenOwner`
 - No CMD do Windows use `%NOME_DA_VARIAVEL%`
