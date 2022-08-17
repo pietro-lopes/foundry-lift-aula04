@@ -41,6 +41,8 @@ Por favor instale o seguinte:
 
 ```sh
 git clone https://github.com/pietro-lopes/foundry-lift-aula04
+cd foundry-lift-aula04
+git submodule update --init --recursive
 ```
 
 - Abra a pasta da aula no seu editor, por exemplo, VSCode.
@@ -84,7 +86,12 @@ seguinte comando: **Não esqueça de carregar as variáveis que estão em** `.en
 _Sempre que você fechar o terminal, você terá que recarregar as variáveis
 novamente._
 
-`forge create --verify --gas-price 60gwei --chain polygon-mumbai --rpc-url $MUMBAI_RPC --private-key $PRIVATE_KEY --etherscan-api-key $POLYGONSCAN_API_KEY src/T03TokenOwner.sol:T03TokenOwner`
+- No terminal do Linux use `$NOME_DA_VARIAVEL`
+  `forge create --verify --gas-price 60gwei --chain polygon-mumbai --rpc-url $MUMBAI_RPC --private-key $PRIVATE_KEY --etherscan-api-key $POLYGONSCAN_API_KEY src/T03TokenOwner.sol:T03TokenOwner`
+- No PowerShell use `$Env:NOME_DA_VARIAVEL`
+  `forge create --verify --gas-price 60gwei --chain polygon-mumbai --rpc-url $Env:MUMBAI_RPC --private-key $Env:PRIVATE_KEY --etherscan-api-key $Env:POLYGONSCAN_API_KEY src/T03TokenOwner.sol:T03TokenOwner`
+- No CMD do Windows use `%NOME_DA_VARIAVEL%`
+  `forge create --verify --gas-price 60gwei --chain polygon-mumbai --rpc-url %MUMBAI_RPC% --private-key %PRIVATE_KEY% --etherscan-api-key %POLYGONSCAN_API_KEY% src/T03TokenOwner.sol:T03TokenOwner`
 
 Edite onde for necessário, por exemplo o `--gas-price` e o contrato
 `src/<contrato>.sol:<contrato>` e adicione
